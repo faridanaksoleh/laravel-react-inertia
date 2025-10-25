@@ -1,10 +1,10 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use PHPUnit\Framework\Attributes\PostCondition;
 
-Route::get('/', function () {
-    return Inertia::render('Home', ['name' => 'mike']);
-});
+Route::get('/', [PostController::class, 'index']);
 
-// Route::inertia('/', 'Home');
+Route::resource('/posts', PostController::class)->except('index');
