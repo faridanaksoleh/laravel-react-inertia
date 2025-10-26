@@ -5,11 +5,15 @@ export default function Layout({ children }) {
         <>
             <header>
                 <nav>
-                    <Link className="nav-link" href="/">Home</Link>
-                    <Link className="nav-link" href="/posts/create">Create</Link>
+                    <Link className="nav-link" href="/">
+                        Home
+                    </Link>
+                    <Link className="nav-link" href="/posts/create">
+                        Create
+                    </Link>
                 </nav>
             </header>
-            
+
             <main>{children}</main>
         </>
     );
